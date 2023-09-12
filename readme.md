@@ -1,12 +1,17 @@
 # 32位 RISC-V 5 段流水线 CPU
 
+本课程设计的总体目标是利用 FPGA 以及相关外围器件，设计五段流水 CPU，
+要求所设计的流水 CPU 系统能支持自动和单步运行方式，能正确地执行存放在主存
+中的程序的功能，对主要的数据流和控制流通过 LED、数码管等适时的进行显示，
+方便监控和调试。
+
 ## 扩展指令集
 
 除基本指令集外，在 CCAB 扩展指令集中支持 2 条 C 类运算指令，1 条 M 类存储指令，1 条 B 类分支指令。
 
 | 分类 | 名称 | 类型 | 功能 |
 | --- | --- | --- | --- |
-| C | SRL | R | rd = rs1 >> rs2 |
+| C | SRL | R | 逻辑右移 rd = rs1 >> rs2 |
 | C | LUI | U | 把一个 20 位的立即数加载到寄存器的高 20 位，低 12 位为 0 |
 | M | SH | S | 将 rs2 寄存器中的低 16 位写入存储单元 M\[R\[rs1\]+SEXT\[imm\[12\] |
 | B | BLTU | B | 无符号数比较小于转移 PC=PC\+SEXT\[imm\[12:1\]<<1\] |
@@ -19,3 +24,6 @@
 | --- | --- |
 | U_Type | 区分立即数的编码方式，支持 U 型指令 `LUI` |
 | BLTU | 支持 `BLTU` |
+
+
+[`Xilinx_Vivado_SDK_2017`](https://www.xilinx.com/member/forms/download/xef-vivado.html?filename=Xilinx_Vivado_SDK_2017.4_1216_1.tar.gz)
