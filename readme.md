@@ -24,6 +24,3 @@
 | --- | --- |
 | U_Type | 区分立即数的编码方式，支持 U 型指令 `LUI` |
 | BLTU | 支持 `BLTU` |
-
-
-[`Xilinx_Vivado_SDK_2017`](https://www.xilinx.com/member/forms/download/xef-vivado.html?filename=Xilinx_Vivado_SDK_2017.4_1216_1.tar.gz)
